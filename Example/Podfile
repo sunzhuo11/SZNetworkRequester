@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SZNetworkRequester_Example' do
+  pod 'SZNetworkRequester', :path => '../'
+
+  target 'SZNetworkRequester_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
