@@ -1,0 +1,6 @@
+framework module Pods_SZNetworkRequester_Tests {
+  umbrella header "Pods-SZNetworkRequester_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

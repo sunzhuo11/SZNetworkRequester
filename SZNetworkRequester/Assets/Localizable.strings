@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  JinJiangDuCheng
+
+  Created by Perry on 15/2/2.
+  Copyright (c) 2015年 SmartJ. All rights reserved.
+*/
+
+"Ok"="确定";
+"Cancel"="取消";
+"Back"="返回";
+"Retry"="重新加载";
+"Dismiss" = "知道了";
+
+"Tips"="温馨提示";

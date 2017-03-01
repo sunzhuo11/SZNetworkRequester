@@ -1,0 +1,18 @@
+/* 
+  NetworkLocalizable.strings
+  JinJiangDuCheng
+
+  Created by huguiqi on 15/1/21.
+  Copyright (c) 2015年 SmartJ. All rights reserved.
+*/
+
+"-1001" = "刚才没反应过来，可以再试一下么？";
+"-1011" = "现在人有点多，稍等一下～";
+"-1002" = "现在人有点多，稍等一下～";
+"-1004" = "现在人有点多，稍等一下～";
+"-1005" = "网络好像不太好...";
+"-1009" = "网络好像不太好...";
+"Unknown"="现在人有点多，稍等一下～";
+
+
+

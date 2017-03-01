@@ -31,6 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SZNetworkRequester/Classes/**/*'
+  s.resources = 'SZNetworkRequester/Assets/**/*'
   
   # s.resource_bundles = {
   #   'SZNetworkRequester' => ['SZNetworkRequester/Assets/*.png']
@@ -40,4 +41,6 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'AFNetworking'
   s.dependency 'MJExtension'
+  s.dependency 'SVProgressHUD'
+  s.dependency 'Masonry'
 end

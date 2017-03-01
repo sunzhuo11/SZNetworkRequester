@@ -2,8 +2,8 @@
 //  SZNetWorkCoreRequester.h
 //  SZNetWorkRequester
 //
-//  Created by Stella on 15/7/15.
-//  Copyright (c) 2015年 sunzhuo11. All rights reserved.
+//  Created by Stella on 16/7/15.
+//  Copyright (c) 2016年 sunzhuo11. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +14,7 @@
 
 @property (nonatomic,strong) AFHTTPSessionManager *sessionManager;
 
--(AFHTTPRequestOperation *)send:(SZBaseForm *)form parserClass:(Class)sourceClass completion:(void (^)(id responseObject, NSError *error))block;
+-(NSURLSessionDataTask *)send:(SZBaseForm *)form parserClass:(Class)sourceClass completion:(void (^)(id responseObject, NSError *error))block;
 
 -(void)cancel;
 

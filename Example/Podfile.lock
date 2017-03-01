@@ -1,0 +1,42 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Masonry (1.0.2)
+  - MJExtension (3.0.13)
+  - SVProgressHUD (2.1.2)
+  - SZNetworkRequester (0.1.0):
+    - AFNetworking
+    - Masonry
+    - MJExtension
+    - SVProgressHUD
+
+DEPENDENCIES:
+  - SZNetworkRequester (from `../`)
+
+EXTERNAL SOURCES:
+  SZNetworkRequester:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SZNetworkRequester: 3971c8c213bd9661f98b618259cd7aedd5dfc441
+
+PODFILE CHECKSUM: 5ba3da397e15518fa38d7c42b4486f30e5061ce2
+
+COCOAPODS: 1.2.0.beta.1

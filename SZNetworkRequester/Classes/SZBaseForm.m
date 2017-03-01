@@ -1,9 +1,9 @@
 //
 //  SZBaseForm.m
-//  Wardrobe
+//  SZNetWorkRequester
 //
-//  Created by Perry on 15/1/16.
-//  Copyright (c) 2015年 SmartJ. All rights reserved.
+//  Created by Stella on 16/1/16.
+//  Copyright (c) 2016年 sunzhuo11. All rights reserved.
 //
 
 #import <objc/runtime.h>
@@ -20,52 +20,68 @@
 
 -(instancetype)init
 {
-    if(self = [super init]){
-        _parameters = [NSMutableDictionary dictionary];
-    }
-    return self;
+  if(self = [super init]){
+    _parameters = [NSMutableDictionary dictionary];
+  }
+  return self;
+}
+
+-(NSMutableDictionary *) parameters {
+  return _parameters;
 }
 
 -(NSString *)url {
-    return @"";
+  return @"";
 }
 
--(NSString *)method {
-    return SZDataRequestMethodGet;
+-(BOOL)isGet {
+  return YES;
 }
 
--(NSString *)userHandledCodes {
-    return @[];
+-(NSArray *)userHandledCodes {
+  return @[];
+}
+
+-(NSString *)successCode {
+  return @"";
+}
+
+-(void) encode {
+  
+}
+
+-(SZFileInfo *)file {
+  return nil;
 }
 
 -(void)buildParametes{
-    [_parameters removeAllObjects];
-    [self itemRuntimeProperties:[self class]];
+  [_parameters removeAllObjects];
+  [self itemRuntimeProperties:[self class]];
 }
 
 -(void)itemRuntimeProperties:(Class)clazz
 {
-    if (clazz != [SZBaseForm class]){
-        [self itemRuntimeProperties:class_getSuperclass(clazz)];
+  if (clazz != [SZBaseForm class]){
+    [self itemRuntimeProperties:class_getSuperclass(clazz)];
+  }
+  
+  unsigned int outCount, i;
+  objc_property_t *properties = class_copyPropertyList(clazz, &outCount);
+  for (i = 0; i < outCount; i++) {
+    objc_property_t property = properties[i];
+    NSString *propName = [NSString stringWithUTF8String:property_getName(property)];
+    id value = [self valueForKey:propName];
+    
+    if([@"parameters" isEqualToString:propName]) {
+      continue;
     }
     
-    unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList(clazz, &outCount);
-    for (i = 0; i < outCount; i++) {
-        objc_property_t property = properties[i];
-        NSString *propName = [NSString stringWithUTF8String:property_getName(property)];
-        id value = [self valueForKey:propName];
-        
-        if([@"parameters" isEqualToString:propName] || [@"request" isEqualToString:propName]) {
-            continue;
-        }
-        
-        if(value){
-            [_parameters setObject:value forKey:propName];
-        }
+    if(value){
+      [_parameters setObject:value forKey:propName];
     }
-    
-    free(properties);
+  }
+  
+  free(properties);
 }
 
 @end

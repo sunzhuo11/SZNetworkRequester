@@ -1,0 +1,6 @@
+framework module SZNetworkRequester {
+  umbrella header "SZNetworkRequester-umbrella.h"
+
+  export *
+  module * { export * }
+}
